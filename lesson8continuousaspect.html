@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Lesson 27 - Continuous Aspect </title>
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+<style>
+body{ background: linear-gradient(45deg, white, #D1E4C4, white); 
+height: 400vh; }
+.buttons{
+  background-color:#D1E4C4;
+  color: black; 
+  box-shadow:5px 0px 7px black;
+  border-radius:10px;
+  cursor: pointer;
+  margin-right:15px;
+  margin-top:10px;
+  font-size:30px;
+  transition: background-color 1s;
+  transition: color 1s;
+  width:210px;
+  height: 80px;  
+  border-width: 2px;
+  margin-bottom: 20px;
+  margin-left: 10px;
+  
+}
+.buttons:hover{
+background-color:#F1F7ED;
+color:black;
+box-shadow: 5px 0px 7px black;
+}
+.buttons:active{
+opacity: 0.7;
+}
+
+
+.tooltips{
+ position:relative;
+ display:block;
+ text-align:center;
+ font-size:70px;
+ font-weight:bold;
+ cursor:pointer;
+ 
+}
+.tooltips .tooltipstext{
+ visibility:hidden;
+ position:absolute;
+ z-index:1;
+ left:100px;
+ width:1100px;
+ top:125%;
+ background: #F1F7ED;
+ font-size:40px;
+ font-weight:normal;
+ padding: 5px;
+ border-radius: 6px;
+ box-shadow: 5px 0px 7px black;
+ text-align: left;
+ 
+}
+.tooltips:hover .tooltipstext{  visibility: visible;}
+
+
+.dropdown{ display: flex;}
+ .dropdown button{
+  background-color: #D1E4C4; color: black; padding: 10px 30px;
+  border:none; cursor:pointer; box-shadow: 5px 5px 7px black;
+  transition:0.05s; border-radius:4px;
+ }
+
+ .dropdown a{
+  display: flex; text-decoration: none; text-align: center; padding: 10px 23px; margin-top:10px; background-color: #D1E4C4;
+  color:black; box-shadow: 5px 5px 7px black; border-radius:4px; margin-left:5px;
+ }
+
+ .dropdown .content{
+   position: absolute; min-width:100px;
+  display:none;
+ }
+
+ .dropdown:hover .content{ 
+  display:flex;
+ }
+ .dropdown:hover button{
+  background-color: #F1F7ED; color:black;
+ }
+ .dropdown a:hover{
+  background-color: #F1F7ED; color:black;
+ }
+<nav><div class="dropdown">
+ <button>Lessons</button>
+ <div class="content">
+  <a href="lesson1new.html" target="_blank">Lesson 1</a>
+  <a href="lesson2new.html" target="_blank">Lesson 2</a>
+  <a href="lesson3new.html" target="_blank">Lesson 3</a>
+  <a href="lesson4new.html" target="_blank">Lesson 4</a>
+  <a href="lesson5new.html" target="_blank">Lesson 5</a>
+  <a href="lesson6new.html" target="_blank">Lesson 6</a>
+  <a href="lesson7new.html" target="_blank">Lesson 7</a>
+  <a href="lesson8new.html" target="_blank">Lesson 8</a>
+  <a href="lesson9new.html" target="_blank">Lesson 9</a>
+  <a href="lesson10new.html" target="_blank">Lesson 10</a>
+  <a href="lesson11new.html" target="_blank">Lesson 11</a>
+  <a href="lesson12new.html" target="_blank">Lesson 12</a>
+  <a href="lesson13new.html" target="_blank">Lesson 13</a>
+ </div>
+</div></nav>
+
+
+
+
+.p1 {}
+.p4 { font-size: 40px; cursor:pointer;}
+.p1 { font-size: 30px; cursor:pointer;}
+
+.div1 {display: grid; grid-template-columns: 900px; justify-content: center; margin-top: 20px;}
+.div2 {display: grid; grid-template-columns: 1fr 1fr 1fr 1fr ; margin-bottom: 30px;}
+.div3 {display: grid; grid-template-columns: 1fr 1fr 1fr  ; margin-bottom: 30px;}
+.div4  {display: grid; grid-template-columns: 1fr 1fr 1fr 1fr ; margin-bottom: 30px;}
+.div5 {display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; margin-bottom: 30px;}
+.div6 {display: grid; grid-template-columns: 1fr 1fr;}
+.div7 {text-align: center; font-size: 40px;}
+.div8 {display: grid; grid-template-columns: 1fr 1fr 1fr;}
+.img {width:300px; height: 270px;}
+.img2 {width:300px; height: 270px; }
+
+@media screen and (max-width: 1000px){
+.p4{ font-size: 30px;}
+.p1 {font-size: 25px;}
+
+.div1 {display: grid; grid-template-columns: 1fr;}
+.div2 {display: grid; grid-template-columns: 1fr;}
+.div3 {display: grid; grid-template-columns: 1fr;}
+.div4 {display: grid; grid-template-columns: 1fr;}
+.div5 {display: grid; grid-template-columns: 1fr;}
+.div6 {display: grid; grid-template-columns: 1fr;}
+.div7 {text-align: center; font-size: 30px;}
+.div8 {display: grid; grid-template-columns: 1fr ;}
+.wrapper { overflow-x: hidden; width: 100%; background: linear-gradient(45deg, white, #D1E4C4, white);}
+
+.img{width:150px; height: 135px;}
+.img2 {width:150px; height: 135px; }
+
+
+.tooltips{
+ position:relative;
+ display:block;
+ text-align: center;
+ font-size:50px;
+ font-weight:bold;
+ cursor:pointer;
+ 
+}
+.tooltips .tooltipstext{
+ visibility:hidden;
+ position:absolute;
+ z-index:1;
+ left:100px;
+ width:1100px;
+ top:125%;
+ background: #F1F7ED;
+ font-size:40px;
+ font-weight:normal;
+ padding: 5px;
+ border-radius: 6px;
+ box-shadow: 5px 0px 7px black;
+ 
+}
+.tooltips:hover .tooltipstext{  visibility: hidden;}
+
+.buttons{
+  background-color:#D1E4C4;
+  color: black; 
+  box-shadow:5px 0px 7px black;
+  border-radius:10px;
+  cursor: pointer;
+  margin-right:5px;
+  font-size:30px;
+  transition: background-color 1s;
+  transition: color 1s;
+  width:250px;
+  height: 80px;  
+  border-width: 2px;
+  margin-bottom: 25px;
+  margin-left: 5px;
+  
+}
+.buttons:hover{
+background-color:#F1F7ED;
+color:black;
+box-shadow: 5px 0px 7px black;
+}
+.buttons:active{
+opacity: 0.7;
+}
+
+}
+}
+
+
+
+</style>
+</head>
+<body>
+
+<div class="wrapper">
+<h1 class="tooltips"> Continuous aspect  <span class="tooltipstext"> also known as the progressive aspect, is a verb form used to describe actions or states that are ongoing &middot; in progress &middot; temporary.<br><br> In English grammar, it is formed by combining the auxiliary verb "to be" "in the appropriate tense" with the present participle <b>-ing form</b> of the main verb.<br>
+
+There are three main tenses in the continuous aspect: present continuous &middot; past continuous &middot; future continuous. Let's explore each of these tenses:</span> </h1> 
+
+<div class="div1" style=" ">
+
+
+<div style="text-align: left; font-size: 30px; background-color: #D1E4C4; padding: 10px; border-radius: 6px; box-shadow: 1px 1px 1px grey;">
+
+<div style="text-align: left; font-size: 30px;">
+<div style="text-align: center; font-size: 40px;"><b> Present Continuous </b></div><br>
+The present continuous tense is used to describe &middot;actions or states that are happening at the moment of speaking &bull; ongoing actions &bull; temporary situations &bull; future plans.<br>
+It is formed using the present tense of the verb "to be" <b> am &middot; is &middot; are</b> followed by the present participle of the main verb.<br><br>
+
+
+Examples:<br><br>
+
+&bull;  I <b>am studying</b> for my exams. <br>
+Action happening at the moment of speaking<br><hr>
+
+&bull;  They <b>are playing</b> basketball in the park.<br>
+ Ongoing action<br><hr>
+
+&bull;  She <b>is staying</b> with her parents until she finds a new apartment. <br>
+Temporary situation<br><hr>
+
+&bull;  We <b>are meeting</b> our friends for dinner tomorrow.<br>
+Future plan
+
+</div>
+</div>
+</div>
+
+<div class="div1" style=" ">
+
+
+<div style="text-align: left; font-size: 30px; background-color: #F1F7ED; padding: 10px; border-radius: 6px; box-shadow: 1px 1px 1px grey;">
+
+<div style="text-align: left; font-size: 30px;">
+<div style="text-align: center; font-size: 40px;"><b> Past Continuous </b></div>
+
+The past continuous tense is used to describe actions or states that were ongoing or in progress at a specific point in the past.<br>
+It is formed using the past tense of the verb "to be" <b>was &middot; were</b> followed by the present participle of the main verb.<br><br>
+
+
+Examples:<br><br>
+
+&bull;  I <b>was reading</b> a book when the phone rang.<br>
+Action happening at a specific point in the past<br><hr>
+
+&bull;  They <b>were watching</b> TV when the power went out.<br>
+Ongoing action interrupted by another event<br><hr>
+
+&bull;  She <b>was working</b> late last night.<br>
+Ongoing action at a specific time in the past
+
+
+</div>
+</div>
+</div>
+
+
+<div class="div1" style=" ">
+
+
+<div style="text-align: left; font-size: 30px; background-color: #D1E4C4; padding: 10px; border-radius: 6px; box-shadow: 1px 1px 1px grey;">
+
+<div style="text-align: left; font-size: 30px;">
+<div style="text-align: center; font-size: 40px;"><b> Future Continuous </b></div>
+The future continuous tense is used to describe actions or states that will be ongoing or in progress at a specific time or during a specific period in the future.<br>
+It is formed using the future tense of the verb "to be" <b>will be</b> followed by the present participle of the main verb.<br><br>
+
+Examples:<br><br>
+
+&bull; I <b>will be studying</b> at this time tomorrow. <br>
+Action ongoing at a specific time in the future<br><hr>
+
+&bull; They <b>will be traveling</b> to Europe next summer.<br>
+Ongoing action during a specific period in the future<br><hr>
+
+&bull; She <b>will be waiting</b> for you when you arrive.<br>
+Ongoing action at a specific time in the future<br><br>
+
+</div>
+</div>
+</div>
+
+<div class="div1" style=" ">
+
+
+<div style="text-align: left; font-size: 30px; background-color: #F1F7ED; padding: 10px; border-radius: 6px; box-shadow: 1px 1px 1px grey;">
+
+<div style="text-align: left; font-size: 30px;">
+<div style="text-align: center; font-size: 40px;"><b>  In summary </b></div>
+the continuous aspect in English grammar is used to describe actions or states that are ongoing &bull; in progress &bull; temporary. It is formed by combining the appropriate tense of the verb "to be" with the present participle of the main verb. Understanding and correctly using the continuous aspect allows speakers and writers to convey the dynamic nature of actions and situations.
+
+</div>
+</div>
+</div>
+
+</div>
+<script>
+
+  var sound1 = new Audio();
+  sound1.src = "spectacles.mp3";
+
+  var sound2 = new Audio();
+  sound2.src = "pyjamas.mp3";
+
+  var sound3 = new Audio();
+  sound3.src = "tights.mp3";
+
+  var sound4 = new Audio();
+  sound4.src = "trousers.mp3";
+
+  var sound5 = new Audio();
+  sound5.src = "pants.mp3";
+
+  var sound6 = new Audio();
+  sound6.src = "jeans.mp3";
+
+  var sound7 = new Audio();
+  sound7.src = "shorts.mp3";
+
+  var sound8 = new Audio();
+  sound8.src = "boxers.mp3";
+
+  var sound9 = new Audio();
+  sound9.src = "knickers.mp3";
+
+  var sound10 = new Audio();
+  sound10.src = "pliers.mp3";
+
+  var sound11 = new Audio();
+  sound11.src = "scissors.mp3";
+
+  var sound12 = new Audio();
+  sound12.src = "binoculars.mp3";
+ 
+  var sound13 = new Audio();
+  sound13.src = "pincers.mp3";
+
+  var sound14 = new Audio();
+  sound14.src = "flock.mp3";
+
+  var sound15 = new Audio();
+  sound15.src = "herd.mp3";
+
+  var sound16 = new Audio();
+  sound16.src = "team.mp3";
+
+  var sound17 = new Audio();
+  sound17.src = "anitemof.mp3";
+
+  var sound18 = new Audio();
+  sound18.src = "itemsof.mp3";
+
+ 
+  var sound19 = new Audio();
+  sound19.src = "both.mp3";
+
+  var sound20 = new Audio();
+  sound20.src = "either.mp3";
+
+  var sound21 = new Audio();
+  sound21.src = "neither.mp3";
+
+  var sound22 = new Audio();
+  sound22.src = "afew.mp3";
+
+  var sound23 = new Audio();
+  sound23.src = "fewer.mp3";
+
+  var sound24 = new Audio();
+  sound24.src = "acoupleof.mp3";
+
+  var sound25 = new Audio();
+  sound25.src = "hundredsof.mp3";
+
+  var sound26 = new Audio();
+  sound26.src = "thousandsof.mp3";
+
+  var sound27 = new Audio();
+  sound27.src = "notmuch.mp3";
+
+  var sound28 = new Audio();
+  sound28.src = "abitof.mp3";
+
+  var sound29 = new Audio();
+  sound29.src = "alittle.mp3";
+
+  var sound30 = new Audio();
+  sound30.src = "agreatdealof.mp3";
+
+  var sound31 = new Audio();
+  sound31.src = "agooddealof.mp3";
+ 
+
+  
+
+
+</script>
+</body>
+</ht
